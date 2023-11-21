@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite data-provider-thread-count="5" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.qa.OpenCart.base.ListenerClass"/>
+  </listeners>
+  <test thread-count="5" name="OP-Cart(failed)">
+    <parameter name="Author" value="abhilash babu Durgumahanthi"/>
+    <classes>
+      <class name="com.qa.OpenCart.TestCases.TC_Register">
+        <methods>
+          <include name="tearDown"/>
+          <include name="generateReports"/>
+          <include name="initialiseBrowser"/>
+          <include name="register" invocation-numbers="0 1 2 3 4 5"/>
+          <include name="initialiseReport"/>
+          <include name="groups"/>
+          <include name="checkStatus"/>
+        </methods>
+      </class> <!-- com.qa.OpenCart.TestCases.TC_Register -->
+    </classes>
+  </test> <!-- OP-Cart(failed) -->
+</suite> <!-- Failed suite [Suite] -->
