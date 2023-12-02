@@ -104,7 +104,7 @@ log = LogManager.getLogger();
 		timeStamp = new SimpleDateFormat("ddMMyyyyHHmmss").format(new Date());
 		repName = "TestReport"+timeStamp+".html";
 		extent = new ExtentReports();
-		spark = new ExtentSparkReporter(".//ExtentReports//"+repName);
+		spark = new ExtentSparkReporter("user.dir"+"\\ExtentReports\\"+repName);
 		extent.attachReporter(spark);
 		extent.setSystemInfo("os name", System.getProperty("os.name"));
 		extent.setSystemInfo("os version", System.getProperty("os.version"));
@@ -122,7 +122,7 @@ log = LogManager.getLogger();
 	@AfterSuite
 	public void generateReports() throws IOException {
 		extent.flush();                        
-		Desktop.getDesktop().browse(new File(".//ExtentReports//"+repName).toURI());
+		Desktop.getDesktop().browse(new File("user.dir"+"//ExtentReports//"+repName).toURI());
 	}
 
 	@BeforeMethod
