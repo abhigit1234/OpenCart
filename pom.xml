@@ -11,10 +11,17 @@
 					<artifactId>maven-surefire-plugin</artifactId>
 					<version>3.2.2</version>
 					<configuration>
-						<suiteXmlFiles>
+								<suiteXmlFiles>
 							<suiteXmlFile>testng.xml</suiteXmlFile>
 						</suiteXmlFiles>
-					</configuration>
+					<!-- 	<suiteXmlFiles>
+							<suiteXmlFile>${xmlFiles}</suiteXmlFile>
+						</suiteXmlFiles>
+						<systemPropertyVariables>
+							<executionBrowser>${browser}</executionBrowser>
+							<appurl>${url}</appurl>
+						</systemPropertyVariables>
+ -->					</configuration>
 				</plugin>
 			</plugins>
 		</pluginManagement>
