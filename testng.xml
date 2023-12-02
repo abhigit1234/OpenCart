@@ -6,6 +6,7 @@
 	</listeners>
 	<test name="OP-Cart" >
 	<parameter name="author" value="abhilash babu Durgumahanthi"/>
+	<parameter name="browser" value="firefox"/>
 		<classes>
 			<class name="com.qa.OpenCart.TestCases.TC_Register">
 			<methods>

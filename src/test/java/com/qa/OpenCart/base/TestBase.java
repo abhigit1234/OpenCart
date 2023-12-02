@@ -31,6 +31,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -50,8 +51,9 @@ public class TestBase {
 	public static String timeStamp;
 	public static Logger log ;
 
+	@Parameters("browser")
 	@BeforeTest
-	public void initialiseBrowser(ITestContext context) throws Exception {
+	public void initialiseBrowser(ITestContext context,String browser) throws Exception {
 log = LogManager.getLogger();
 		try {
 			p = new Properties();
@@ -61,7 +63,7 @@ log = LogManager.getLogger();
 			e.getStackTrace();
 		}
 		
-		String browser = p.getProperty("browser");
+		//String browser = p.getProperty("browser");
 		switch (browser.toLowerCase()) {
 		case "chrome":
 			driver = new ChromeDriver();
